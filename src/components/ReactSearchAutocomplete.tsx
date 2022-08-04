@@ -261,7 +261,7 @@ const StyledReactSearchAutocomplete = styled.div`
     border: ${(props) => props.theme.border};
     border-radius: ${(props) => props.theme.borderRadius};
 
-    background-color: ${(props) => props.theme.backgroundColor};
+    background-color: red;
     color: ${(props) => props.theme.color};
 
     font-size: ${(props) => props.theme.fontSize};
