@@ -270,7 +270,7 @@ const StyledReactSearchAutocomplete = styled.div`
     z-index: ${(props) => props.theme.zIndex};
 
     &:hover {
-      box-shadow: ${(props) => props.theme.boxShadow};
+      box-shadow: 10px 10px 30px #AEAEC066;
     }
     &:active {
       box-shadow: ${(props) => props.theme.boxShadow};
