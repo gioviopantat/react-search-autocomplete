@@ -252,6 +252,7 @@ const StyledReactSearchAutocomplete = styled.div`
   height: ${(props) => parseInt(props.theme.height) + 2 + 'px'};
 
   > .wrapper {
+    top: 20px;
     position: absolute;
     display: flex;
     flex-direction: column;

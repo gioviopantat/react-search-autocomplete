@@ -124,10 +124,6 @@ const StyledResults = styled.div`
       display: flex;
       align-items: center;
       padding: 4px 0 4px 0;
-
-      > div {
-        margin-left: 13px;
-      }
     }
   }
 
