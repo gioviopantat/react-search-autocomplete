@@ -43,11 +43,11 @@ export default function ReactSearchAutocomplete<T>({
   items = [],
   fuseOptions = defaultFuseOptions,
   inputDebounce = DEFAULT_INPUT_DEBOUNCE,
-  onSearch = () => {},
-  onHover = () => {},
-  onSelect = () => {},
-  onFocus = () => {},
-  onClear = () => {},
+  onSearch = () => { },
+  onHover = () => { },
+  onSelect = () => { },
+  onFocus = () => { },
+  onClear = () => { },
   showIcon = true,
   showClear = true,
   maxResults = MAX_RESULTS,
@@ -215,7 +215,8 @@ export default function ReactSearchAutocomplete<T>({
   return (
     <ThemeProvider theme={theme}>
       <StyledReactSearchAutocomplete>
-        <div className="wrapper">
+        <div className="wrapper"
+          style={{ borderRadius: '10px', position: 'absolute', top: '40px', background: '#ffffff', boxShadow: '10px 10px 30px #aeaec066' }}>
           <SearchInput
             searchString={searchString}
             setSearchString={handleSetSearchString}
@@ -261,7 +262,7 @@ const StyledReactSearchAutocomplete = styled.div`
     border: ${(props) => props.theme.border};
     border-radius: ${(props) => props.theme.borderRadius};
 
-    background-color: red;
+    background-color: ${(props) => props.theme.backgroundColor};
     color: ${(props) => props.theme.color};
 
     font-size: ${(props) => props.theme.fontSize};
