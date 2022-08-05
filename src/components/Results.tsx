@@ -117,7 +117,7 @@ const StyledResults = styled.div`
   > ul {
     list-style-type: none;
     margin: 0;
-    padding: 0 4px 0 4px;
+    padding: 8px 4px 8px 4px;
     max-height: ${(props) => props.theme.maxHeight};
 
     > li {
