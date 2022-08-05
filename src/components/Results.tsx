@@ -102,7 +102,7 @@ const ResultsWrapper = ({ children }: { children: ReactNode }) => {
 
 const StyledResults = styled.div`
   > div.line {
-    border-top-color: ${(props) => props.theme.lineColor};
+    border-top-color: #d9d9d9;
     border-top-style: solid;
     border-top-width: 1px;
 
