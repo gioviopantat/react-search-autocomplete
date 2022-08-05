@@ -2,7 +2,7 @@
   "name": "@berify/react-search-autocomplete",
   "author": "Reale Roberto Josef Antonio",
   "license": "MIT",
-  "version": "7.2.8",
+  "version": "7.2.9",
   "description": "A search box for React",
   "main": "dist/index.js",
   "scripts": {
