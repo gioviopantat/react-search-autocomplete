@@ -215,8 +215,7 @@ export default function ReactSearchAutocomplete<T>({
   return (
     <ThemeProvider theme={theme}>
       <StyledReactSearchAutocomplete>
-        <div className="wrapper"
-          style={{ borderRadius: '10px', position: 'absolute', top: '40px', background: '#ffffff', boxShadow: '10px 10px 30px #aeaec066' }}>
+        <div className="wrapper">
           <SearchInput
             searchString={searchString}
             setSearchString={handleSetSearchString}
@@ -253,7 +252,6 @@ const StyledReactSearchAutocomplete = styled.div`
   height: ${(props) => parseInt(props.theme.height) + 2 + 'px'};
 
   > .wrapper {
-    top: 20px;
     position: absolute;
     display: flex;
     flex-direction: column;
