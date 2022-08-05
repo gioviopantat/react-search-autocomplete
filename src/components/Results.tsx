@@ -117,17 +117,18 @@ const StyledResults = styled.div`
   > ul {
     list-style-type: none;
     margin: 0;
-    padding: 0px 0 16px 0;
+    padding: 0 4px 0 4px;
     max-height: ${(props) => props.theme.maxHeight};
 
     > li {
       display: flex;
       align-items: center;
-      padding: 4px 0 4px 0;
+      padding: 4px;
     }
   }
 
   .ellipsis {
+    margin: 0;
     text-align: left;
     width: 100%;
     white-space: nowrap;
@@ -137,5 +138,6 @@ const StyledResults = styled.div`
 
   .selected {
     background-color: ${(props) => props.theme.hoverBackgroundColor};
+    border-radius: 10px;
   }
 `
