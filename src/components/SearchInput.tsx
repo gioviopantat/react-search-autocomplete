@@ -44,6 +44,7 @@ export default function SearchInput({
     <StyledSearchInput>
       <SearchIcon showIcon={showIcon} />
       <input
+        type="submit"
         ref={ref}
         spellCheck={false}
         value={searchString}
@@ -51,7 +52,7 @@ export default function SearchInput({
         onFocus={handleOnFocus}
         placeholder={placeholder}
         autoFocus={autoFocus}
-        onKeyDown={(event) => setSearchString}
+        onKeyDown={(event) => setHighlightedItem({ event })}
         data-test="search-input"
       />
       <ClearIcon
