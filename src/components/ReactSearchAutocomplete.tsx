@@ -37,6 +37,7 @@ export interface ReactSearchAutocompleteProps<T> {
   showNoResults?: boolean
   showNoResultsText?: string
   showItemsOnFocus?: boolean
+  enterToSelect?: boolean
 }
 
 export default function ReactSearchAutocomplete<T>({
@@ -59,7 +60,8 @@ export default function ReactSearchAutocomplete<T>({
   formatResult,
   showNoResults = true,
   showNoResultsText = 'No results',
-  showItemsOnFocus = false
+  showItemsOnFocus = false,
+  enterToSelect = false
 }: ReactSearchAutocompleteProps<T>) {
   const theme = { ...defaultTheme, ...styling }
   const options = { ...defaultFuseOptions, ...fuseOptions }
@@ -189,6 +191,11 @@ export default function ReactSearchAutocomplete<T>({
     } else if (event) {
       switch (event.key) {
         case 'Enter':
+          if (results.length > 0 && enterToSelect) {
+            onSelect(results[highlightedItem])
+            setSearchString(results[highlightedItem][resultStringKeyName])
+            setHighlightedItem(0)
+          }
           eraseResults()
           break
         case 'ArrowUp':
