@@ -44,7 +44,6 @@ export default function SearchInput({
     <StyledSearchInput>
       <SearchIcon showIcon={showIcon} />
       <input
-        type="submit"
         ref={ref}
         spellCheck={false}
         value={searchString}
