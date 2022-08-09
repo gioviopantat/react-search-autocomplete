@@ -52,15 +52,13 @@ export default function SearchInput({
         placeholder={placeholder}
         autoFocus={autoFocus}
         onKeyDown={(event) => setHighlightedItem({ event })}
-        data-test="search-input"
-      />
+        data-test="search-input"/>
       <ClearIcon
         showClear={showClear}
         setSearchString={setSearchString}
         searchString={searchString}
         onClear={onClear}
-        setFocus={setFocus}
-      />
+        setFocus={setFocus}/>
     </StyledSearchInput>
   )
 }
