@@ -196,6 +196,10 @@ export default function ReactSearchAutocomplete<T>({
           }
           eraseResults()
           break
+        case 'Ctrl' + 'Enter':
+          event.preventDefault()
+          eraseResults()
+          break
         case 'ArrowUp':
           event.preventDefault()
           itemIndex = highlightedItem > 0 ? highlightedItem - 1 : results.length - 1
