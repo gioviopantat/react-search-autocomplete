@@ -1,7 +1,6 @@
 import { ChangeEventHandler, FocusEvent, FocusEventHandler, useRef } from 'react'
 import styled from 'styled-components'
 import { ClearIcon } from './ClearIcon'
-import { SearchIcon } from './SearchIcon'
 
 interface SearchInputProps {
   searchString: string
@@ -11,7 +10,6 @@ interface SearchInputProps {
   onFocus: FocusEventHandler<HTMLInputElement>
   onClear: Function
   placeholder: string
-  showIcon: boolean
   showClear: boolean
 }
 
@@ -23,7 +21,6 @@ export default function SearchInput({
   onFocus,
   onClear,
   placeholder,
-  showIcon = true,
   showClear = true
 }: SearchInputProps) {
   const ref = useRef<HTMLInputElement>(null)
@@ -42,7 +39,6 @@ export default function SearchInput({
 
   return (
     <StyledSearchInput>
-      <SearchIcon showIcon={showIcon} />
       <input
         ref={ref}
         spellCheck={false}

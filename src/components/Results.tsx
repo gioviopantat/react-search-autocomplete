@@ -1,6 +1,5 @@
 import { MouseEvent, ReactNode } from 'react'
 import styled from 'styled-components'
-import { SearchIcon } from './SearchIcon'
 
 export type Item<T> = T & { [key: string]: any }
 
@@ -11,7 +10,6 @@ export interface ResultsProps<T> {
   setHighlightedItem: Function
   setSearchString: Function
   formatResult?: Function
-  showIcon: boolean
   maxResults: number
   resultStringKeyName: string
   showNoResultsFlag?: boolean
@@ -22,7 +20,6 @@ export default function Results<T>({
   results = [] as any,
   onClick,
   setSearchString,
-  showIcon,
   maxResults,
   resultStringKeyName = 'name',
   highlightedItem,
@@ -59,7 +56,6 @@ export default function Results<T>({
     return (
       <ResultsWrapper>
         <li data-test="no-results-message">
-          <SearchIcon showIcon={showIcon} />
           <div className="ellipsis">{showNoResultsText}</div>
         </li>
       </ResultsWrapper>
@@ -81,7 +77,6 @@ export default function Results<T>({
           onMouseDown={(event) => handleMouseDown({ event, result })}
           onClick={() => handleClick(result)}
         >
-          <SearchIcon showIcon={showIcon} />
           <div className="ellipsis" title={result[resultStringKeyName] as string}>
             {formatResultWithKey(result)}
           </div>
